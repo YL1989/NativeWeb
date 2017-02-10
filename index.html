@@ -12,6 +12,7 @@
 	<body>
 		<button id="btn">Web按钮</button>
 		<button id="btn2">Web按钮2</button>
+		<button id="btn3">Web长方法按钮</button>
 	</body>
 	<script>
 			var btn = document.getElementById("btn");
@@ -22,6 +23,11 @@
 			var btn2 = document.getElementById("btn2");
 			btn2.onclick = function(){
 				var s = OCObject.log2("我还是JS");
+				alert(s);
+			}
+			var btn3 = document.getElementById("btn3");
+			btn3.onclick = function(){
+				var s = OCObject.longLog("呵呵","哈哈");
 				alert(s);
 			}
 		</script>
