@@ -12,23 +12,29 @@
 	<body>
 		<button id="btn">Web按钮</button>
 		<button id="btn2">Web按钮2</button>
-		<button id="btn3">Web长方法按钮</button>
+		<button id="btn3">Web多参数按钮</button>
 	</body>
-	<script>
+	<script type="text/javascript">
 			var btn = document.getElementById("btn");
 			btn.onclick = function(){
+				//调用OC方法
 				var s = OCObject.log("我是JS");
 				alert(s);
 			}
 			var btn2 = document.getElementById("btn2");
 			btn2.onclick = function(){
+				//调用OC方法
 				var s = OCObject.log2("我还是JS");
 				alert(s);
 			}
 			var btn3 = document.getElementById("btn3");
 			btn3.onclick = function(){
-				var s = OCObject.longLog("呵呵","哈哈");
+				//调用OC多参数方法
+				var s = OCObject.longLog("第一个参数","第二个参数");
 				alert(s);
+			}
+			function OCFunction(){
+				alert("由OC调用");
 			}
 		</script>
 </html>
